@@ -1,0 +1,19 @@
+{
+    "id": "fc765468-02b0-4281-bd1a-40a167db2f02",
+    "name": "Memory Test",
+    "topic": "A panda eating bamboo",
+    "mode": "text_to_video",
+    "status": "created",
+    "created_at": "2026-01-14T15:04:04.663628",
+    "updated_at": "2026-01-14T15:04:04.666874",
+    "script": null,
+    "memory": {
+        "visual_style": "Cyberpunk Neon, rain, 80s synthwave",
+        "characters": {
+            "Panda": "A robotic panda with glowing blue LED eyes and chrome fur"
+        },
+        "narrative_tone": "Gritty"
+    },
+    "assets": [],
+    "video_url": null
+}

@@ -1,0 +1,52 @@
+{
+    "id": "0b2b9580-462c-46ed-b89f-f79b03aa563c",
+    "name": "Test Project",
+    "topic": "A short history of coffee",
+    "mode": "text_to_video",
+    "status": "completed",
+    "created_at": "2026-01-14T14:58:52.773177",
+    "updated_at": "2026-01-14T20:28:32.983893",
+    "script": {
+        "title": "The EDITED History of Coffee",
+        "scenes": [
+            {
+                "id": 1,
+                "voiceover": "Our story begins in the highlands of Ethiopia, around the 9th century. Legend tells of a goat herder named Kaldi...",
+                "visual_prompt": "A photorealistic wide shot of the Ethiopian highlands, bathed in golden morning light. A lone goat herder, Kaldi, in traditional clothing, looks surprised as his goats prance excitedly around a small coffee plant with bright red berries. Cinematic lighting, shallow depth of field.",
+                "duration": 7
+            },
+            {
+                "id": 2,
+                "voiceover": "...who noticed his goats behaving unusually energetic after eating berries from a certain tree.",
+                "visual_prompt": "Close-up shot of the coffee berries on the tree, gleaming red in the sunlight. One goat is animated with slight, exaggerated energetic movements (jumping, head-butting playfully). Focus on the berries.",
+                "duration": 5
+            },
+            {
+                "id": 3,
+                "voiceover": "These berries were coffee! Soon, the stimulating effects of coffee were being explored by monks in monasteries.",
+                "visual_prompt": "Interior of an ancient, dimly lit Ethiopian monastery. A monk, with a peaceful but focused expression, is carefully roasting coffee beans over a small fire. Smoke gently rises. A simple wooden table has a pot brewing coffee.",
+                "duration": 7
+            },
+            {
+                "id": 4,
+                "voiceover": "By the 15th century, coffee had spread to the Arabian Peninsula. Coffee houses, or 'qahveh khaneh,' became centers for social and intellectual life.",
+                "visual_prompt": "A bustling Arabian coffee house in the 15th century. People are gathered, drinking coffee, playing backgammon, and engaged in lively conversations. Lanterns illuminate the scene, creating warm and inviting lighting.",
+                "duration": 8
+            },
+            {
+                "id": 5,
+                "voiceover": "From there, coffee journeyed to Europe, and then across the globe, becoming the beloved beverage we know today.",
+                "visual_prompt": "A montage of quick cuts: a European coffee shop in the 17th century; a modern coffee plantation in South America; a person in a modern city holding a coffee cup with steam rising. The final shot shows a diverse group of people enjoying coffee together.",
+                "duration": 8
+            },
+            {
+                "id": 6,
+                "voiceover": "So, next time you enjoy a cup, remember its rich and fascinating history!",
+                "visual_prompt": "A close-up shot of a perfectly brewed cup of coffee, with crema swirling on top. Steam gently rises. Sunlight streams through a window, highlighting the coffee's texture.",
+                "duration": 5
+            }
+        ]
+    },
+    "assets": [],
+    "video_url": "/static/0b2b9580-462c-46ed-b89f-f79b03aa563c/final.mp4"
+}

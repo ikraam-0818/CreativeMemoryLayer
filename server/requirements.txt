@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+moviepy
+google-genai
+python-dotenv
+python-multipart
+gTTS
