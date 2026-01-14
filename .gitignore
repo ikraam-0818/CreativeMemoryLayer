@@ -27,6 +27,7 @@ build/
 # or just ignore the folder entirely since main.py creates it.
 server/storage/
 storage/
+server/static/
 
 # Logs
 *.log
