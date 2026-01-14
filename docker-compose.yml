@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persist the storage folder to a local directory
+      - ./server/storage:/app/storage
+      # Optional: Hot reload logic would require mounting code, 
+      # but this compose is for "Production-like" usage.
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    restart: always

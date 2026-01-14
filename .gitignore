@@ -1,0 +1,40 @@
+# System
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Environment Variables / Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+*.py[cod]
+
+# Build Artifacts
+dist/
+build/
+*.egg-info/
+
+# App Storage (Persistence Layer)
+# We ignore the local storage folder so user data isn't committed
+# But we might want to keep the folder structure? 
+# Best to ignore the contents but keep the folder if needed, 
+# or just ignore the folder entirely since main.py creates it.
+server/storage/
+storage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.idea/
+.vscode/
+*.swp

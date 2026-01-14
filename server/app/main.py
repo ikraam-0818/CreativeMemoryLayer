@@ -2,6 +2,7 @@ import os
 import shutil
 import uuid
 from fastapi import FastAPI, BackgroundTasks, HTTPException
+from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
@@ -207,11 +208,30 @@ async def generate_project(project_id: str, background_tasks: BackgroundTasks):
 # Let's map the old endpoint to the new flow for backward compatibility if possible,
 # OR just break it as planned. Plan said "Breaking API Change". I will execute the break.
 
-# Mount storage as static
+# Mount storage as static resources (videos)
 os.makedirs("storage", exist_ok=True)
 app.mount("/static", StaticFiles(directory="storage"), name="static")
 
+# Mount Frontend (Static Files)
+# We assume the frontend build is copied to 'app/static_ui' in the Docker image
+frontend_dir = os.path.join(os.path.dirname(__file__), "static_ui")
+if os.path.exists(frontend_dir):
+    app.mount("/assets", StaticFiles(directory=os.path.join(frontend_dir, "assets")), name="ui_assets")
+
+    @app.get("/{full_path:path}")
+    async def catch_all(full_path: str):
+        # Allow API calls to pass through
+        if full_path.startswith("api/") or full_path.startswith("static/"):
+             raise HTTPException(status_code=404, detail="Not Found")
+        
+        # Serve index.html for React Router
+        return FileResponse(os.path.join(frontend_dir, "index.html"))
+
 @app.get("/")
 def read_root():
-    return {"status": "ok", "message": "Creative Memory Layer API (v2)"}
+    # If frontend exists, serve it
+    if os.path.exists(frontend_dir):
+        return FileResponse(os.path.join(frontend_dir, "index.html"))
+    return {"status": "ok", "message": "Creative Memory Layer API (v2) - Frontend not found"}
+
 
