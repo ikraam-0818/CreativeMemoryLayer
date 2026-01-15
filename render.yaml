@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: creative-memory-layer
+    env: docker
+    plan: free 
+    numInstances: 1
+    healthCheckPath: /
+    # disk: ... (Disks are not supported on Free Tier)
+    # WARNING: Project data will be lost on every restart/deploy
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
