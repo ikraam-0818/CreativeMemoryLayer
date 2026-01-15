@@ -5,3 +5,5 @@ google-genai
 python-dotenv
 python-multipart
 gTTS
+sqlmodel
+psycopg2-binary

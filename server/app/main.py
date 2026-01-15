@@ -22,7 +22,15 @@ app.add_middleware(
 )
 
 # Initialize Storage
-project_manager = storage.ProjectManager(base_dir="storage")
+# Initialize Storage
+database_url = os.getenv("DATABASE_URL")
+if database_url:
+    print(f"✅ Using Database Storage: {database_url}")
+    from app.engine.db_storage import DBProjectManager
+    project_manager = DBProjectManager(database_url)
+else:
+    print("⚠️ Using Local File Storage (server/storage)")
+    project_manager = storage.ProjectManager(base_dir="storage")
 
 # Request Models
 class CreateProjectRequest(BaseModel):
